@@ -82,7 +82,12 @@ namespace CalcClass
          /// <returns>остача</returns>
         public double Mod(double a, double b)
         {
-
+            if (-2147483648 > a % b || 2147483648 < a % b)
+            {
+                _lastError = "Error 06 — Дуже мале, або дуже велике значення числа для int. Числа повинні бути в межах від -2147483648 до 2147483647.";
+                lastError = _lastError;
+                throw new Exception(lastError);
+            }
             return a % b;
         }
          /// <summary>
