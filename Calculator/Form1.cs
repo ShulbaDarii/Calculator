@@ -16,5 +16,23 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBoxException.Text += (sender as Button).Text;
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxException.Text = "";
+        }
+
+        private void buttonBackspace_Click(object sender, EventArgs e)
+        {
+            if (textBoxException.Text.Length > 0)
+            {
+                textBoxException.Text = textBoxException.Text.Substring(0, textBoxException.Text.Length - 1);
+            }
+        }
     }
 }
