@@ -34,10 +34,10 @@ namespace Calculator
             this.textBoxException = new System.Windows.Forms.TextBox();
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonOpen = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
-            this.buttonBackspace = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonBackspace = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.buttonOpen = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -107,25 +107,15 @@ namespace Calculator
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editing";
             // 
-            // buttonOpen
+            // buttonClear
             // 
-            this.buttonOpen.Location = new System.Drawing.Point(18, 31);
-            this.buttonOpen.Name = "buttonOpen";
-            this.buttonOpen.Size = new System.Drawing.Size(49, 40);
-            this.buttonOpen.TabIndex = 0;
-            this.buttonOpen.Text = "(";
-            this.buttonOpen.UseVisualStyleBackColor = true;
-            this.buttonOpen.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.Location = new System.Drawing.Point(73, 31);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(49, 40);
-            this.buttonClose.TabIndex = 1;
-            this.buttonClose.Text = ")";
-            this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.button1_Click);
+            this.buttonClear.Location = new System.Drawing.Point(376, 31);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(75, 40);
+            this.buttonClear.TabIndex = 3;
+            this.buttonClear.Text = "C";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // buttonBackspace
             // 
@@ -137,15 +127,25 @@ namespace Calculator
             this.buttonBackspace.UseVisualStyleBackColor = true;
             this.buttonBackspace.Click += new System.EventHandler(this.buttonBackspace_Click);
             // 
-            // buttonClear
+            // buttonClose
             // 
-            this.buttonClear.Location = new System.Drawing.Point(376, 31);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(75, 40);
-            this.buttonClear.TabIndex = 3;
-            this.buttonClear.Text = "C";
-            this.buttonClear.UseVisualStyleBackColor = true;
-            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            this.buttonClose.Location = new System.Drawing.Point(73, 31);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(49, 40);
+            this.buttonClose.TabIndex = 1;
+            this.buttonClose.Text = ")";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonOpen
+            // 
+            this.buttonOpen.Location = new System.Drawing.Point(18, 31);
+            this.buttonOpen.Name = "buttonOpen";
+            this.buttonOpen.Size = new System.Drawing.Size(49, 40);
+            this.buttonOpen.TabIndex = 0;
+            this.buttonOpen.Text = "(";
+            this.buttonOpen.UseVisualStyleBackColor = true;
+            this.buttonOpen.Click += new System.EventHandler(this.button1_Click);
             // 
             // button1
             // 
@@ -322,6 +322,7 @@ namespace Calculator
             this.buttonMClear.TabIndex = 23;
             this.buttonMClear.Text = "MC";
             this.buttonMClear.UseVisualStyleBackColor = true;
+            this.buttonMClear.Click += new System.EventHandler(this.buttonMClear_Click);
             // 
             // buttonMPlus
             // 
@@ -331,6 +332,7 @@ namespace Calculator
             this.buttonMPlus.TabIndex = 22;
             this.buttonMPlus.Text = "M+";
             this.buttonMPlus.UseVisualStyleBackColor = true;
+            this.buttonMPlus.Click += new System.EventHandler(this.buttonMPlus_Click);
             // 
             // buttonMR
             // 
@@ -340,6 +342,7 @@ namespace Calculator
             this.buttonMR.TabIndex = 21;
             this.buttonMR.Text = "MR";
             this.buttonMR.UseVisualStyleBackColor = true;
+            this.buttonMR.Click += new System.EventHandler(this.buttonMR_Click);
             // 
             // Form1
             // 
