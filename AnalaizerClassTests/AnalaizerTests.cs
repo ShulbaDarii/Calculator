@@ -137,12 +137,8 @@ namespace AnalaizerClass.Tests
         public void CreateStack_65536symbol_Exception()
         {
             // arrange 
-            string tmp = "1234567890+1234567890+123456789+";
-            for (int i = 0; i < 2048; i++)
-            {
-                Analaizer.expression += tmp;
-            }
-            Analaizer.expression += "0";
+            string tmp = new string('1', 65536);
+            Analaizer.expression = tmp;
             // action
             var actual = Analaizer.CreateStack();
         }

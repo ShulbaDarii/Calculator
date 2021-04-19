@@ -1,12 +1,5 @@
 ﻿using CalcClass;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Calculator
@@ -95,5 +88,25 @@ namespace Calculator
                 textBoxException.Text = ex.Message;
             }
         }
+        //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        //{
+        //    if (keyData == Keys.Escape)
+        //    {
+        //        this.Close();
+        //        return true;
+        //    }
+        //    else if (keyData == Keys.Enter)
+        //    {
+        //        if (!string.IsNullOrWhiteSpace(textBoxException.Text))
+        //        {
+        //            AnalaizerClass.Analaizer.expression = textBoxException.Text;
+        //            textBoxException.Text = string.Empty;
+        //            textBoxResult.Text = AnalaizerClass.Analaizer.Estimate();
+        //        }
+
+        //        return true;
+        //    }
+        //    return base.ProcessCmdKey(ref msg, keyData);
+        //}
     }
 }
