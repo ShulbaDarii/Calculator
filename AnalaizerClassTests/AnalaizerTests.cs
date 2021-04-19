@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using AnalaizerClass;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections;
 
@@ -165,6 +166,19 @@ namespace AnalaizerClass.Tests
             var actual = Analaizer.CreateStack();
             // assert
             CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        public void RunEstimate_sum5and2_retyrned17()
+        {
+            // arrange 
+            Analaizer.expression = "6+(5-2)*3+2";
+            string expected = "17";
+            // action
+            Analaizer.CreateStack();
+            var actual = Analaizer.RunEstimate(Analaizer.CreateStack());
+            // assert
+            Assert.AreEqual(expected, actual, $"{Analaizer.expression} should have been {expected}!");
         }
     }
 }

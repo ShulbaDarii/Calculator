@@ -42,7 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Analaizer.cs" />
+    <Compile Include="ContainerOperator.cs" />
+    <Compile Include="Operator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CalcClass\CalcClass.csproj">
+      <Project>{9c66cc80-0ae0-43e9-8237-524bd535b1a6}</Project>
+      <Name>CalcClass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

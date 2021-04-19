@@ -80,6 +80,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AnalaizerClass\AnalaizerClass.csproj">
+      <Project>{8ed819db-71d6-42f8-9759-910d1dd581d7}</Project>
+      <Name>AnalaizerClass</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CalcClass\CalcClass.csproj">
       <Project>{9c66cc80-0ae0-43e9-8237-524bd535b1a6}</Project>
       <Name>CalcClass</Name>

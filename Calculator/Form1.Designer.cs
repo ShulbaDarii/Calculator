@@ -285,6 +285,7 @@ namespace Calculator
             this.buttonMod.TabIndex = 19;
             this.buttonMod.Text = "mod";
             this.buttonMod.UseVisualStyleBackColor = true;
+            this.buttonMod.Click += new System.EventHandler(this.buttonMod_Click);
             // 
             // button0
             // 
@@ -304,6 +305,7 @@ namespace Calculator
             this.buttonPlusMin.TabIndex = 17;
             this.buttonPlusMin.Text = "+/-";
             this.buttonPlusMin.UseVisualStyleBackColor = true;
+            this.buttonPlusMin.Click += new System.EventHandler(this.buttonPlusMin_Click);
             // 
             // buttonRes
             // 
@@ -313,6 +315,7 @@ namespace Calculator
             this.buttonRes.TabIndex = 24;
             this.buttonRes.Text = "=";
             this.buttonRes.UseVisualStyleBackColor = true;
+            this.buttonRes.Click += new System.EventHandler(this.buttonRes_Click);
             // 
             // buttonMClear
             // 

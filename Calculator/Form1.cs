@@ -19,6 +19,7 @@ namespace Calculator
         {
             InitializeComponent();
             mr = 0;
+            Calc = new Calc();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,6 +30,7 @@ namespace Calculator
         private void buttonClear_Click(object sender, EventArgs e)
         {
             textBoxException.Text = "";
+            textBoxResult.Text = "";
         }
 
         private void buttonBackspace_Click(object sender, EventArgs e)
@@ -49,7 +51,8 @@ namespace Calculator
             try
             {
                 mr = Calc.Add(mr, Convert.ToDouble(textBoxResult.Text));
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 textBoxException.Text = ex.Message;
             }
@@ -58,6 +61,39 @@ namespace Calculator
         private void buttonMClear_Click(object sender, EventArgs e)
         {
             mr = 0;
+        }
+
+        private void buttonRes_Click(object sender, EventArgs e)
+        {
+            //textBoxResult.Text = string.Empty;
+            if (!string.IsNullOrWhiteSpace(textBoxException.Text))
+            {
+                AnalaizerClass.Analaizer.expression = textBoxException.Text;
+                textBoxException.Text = string.Empty;
+                textBoxResult.Text = AnalaizerClass.Analaizer.Estimate();
+            }
+        }
+        private void buttonPlusMin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                textBoxResult.Text = Calc.IABS(Convert.ToDouble(textBoxResult.Text)).ToString();
+            }
+            catch (Exception ex)
+            {
+                textBoxException.Text = ex.Message;
+            }
+        }
+        private void buttonMod_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                textBoxResult.Text = Calc.Mod(Convert.ToDouble(textBoxResult.Text), Convert.ToDouble(textBoxException.Text)).ToString();
+            }
+            catch (Exception ex)
+            {
+                textBoxException.Text = ex.Message;
+            }
         }
     }
 }
