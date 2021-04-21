@@ -58,6 +58,7 @@ namespace Calculator
             this.buttonMClear = new System.Windows.Forms.Button();
             this.buttonMPlus = new System.Windows.Forms.Button();
             this.buttonMR = new System.Windows.Forms.Button();
+            this.buttonX = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -347,10 +348,22 @@ namespace Calculator
             this.buttonMR.UseVisualStyleBackColor = true;
             this.buttonMR.Click += new System.EventHandler(this.buttonMR_Click);
             // 
+            // buttonX
+            // 
+            this.buttonX.Location = new System.Drawing.Point(414, 357);
+            this.buttonX.Name = "buttonX";
+            this.buttonX.Size = new System.Drawing.Size(49, 49);
+            this.buttonX.TabIndex = 25;
+            this.buttonX.Text = "x";
+            this.buttonX.UseVisualStyleBackColor = true;
+            this.buttonX.Click += new System.EventHandler(this.buttonX_Click);
+            // 
             // Form1
             // 
+            this.AcceptButton = this.buttonRes;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.buttonX;
             this.ClientSize = new System.Drawing.Size(486, 418);
             this.Controls.Add(this.buttonRes);
             this.Controls.Add(this.buttonMClear);
@@ -377,6 +390,7 @@ namespace Calculator
             this.Controls.Add(this.textBoxException);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonX);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -417,6 +431,7 @@ namespace Calculator
         private System.Windows.Forms.Button buttonMPlus;
         private System.Windows.Forms.Button buttonMR;
         private System.Windows.Forms.TextBox textBoxException;
+        private System.Windows.Forms.Button buttonX;
     }
 }
 

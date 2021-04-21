@@ -88,6 +88,11 @@ namespace Calculator
                 textBoxException.Text = ex.Message;
             }
         }
+
+        private void buttonX_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         //{
         //    if (keyData == Keys.Escape)
